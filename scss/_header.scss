@@ -1,0 +1,163 @@
+header {
+    background-color: rgba(246, 246, 247, 1);
+}
+
+.fon2 {
+    background-color: rgba(0, 160, 172, 1);
+}
+
+.hat {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-hat {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(246, 246, 247, 1);
+    width: 100%;
+    padding: 12px 0px;
+
+}
+
+.search {
+    display: flex;
+}
+
+.location {
+    font-family: SF Pro Text;
+    font-weight: 400;
+    display: flex;
+    gap: 8px;
+}
+
+.locationImg {
+    width: 16px;
+    height: 16px;
+}
+
+.metro {
+    font-family: SF Pro Text;
+    font-weight: 400;
+    display: flex;
+    gap: 6px;
+}
+
+.metroImg {
+    width: 16px;
+    height: 16px;
+}
+
+.workTime {
+    font-family: SF Pro Text;
+    font-weight: 400;
+    display: flex;
+    gap: 6px;
+}
+
+.clockImg {
+    width: 16px;
+    height: 16px;
+}
+
+.phone {
+    font-family: SF Pro Text;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+
+.phone a {
+    text-decoration: none;
+    color: rgba(32, 34, 35, 1);
+}
+
+.mobileImg {
+    width: 16px;
+    height: 16px;
+}
+
+.insta {
+    width: 18px;
+    height: 18px;
+}
+
+.callBack {
+    text-decoration: none;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    display: flex;
+    color: rgba(44, 110, 203, 1);
+}
+
+.auto {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(10%) saturate(1200%) hue-rotate(70deg) brightness(90%) contrast(85%);
+}
+
+.zoo {
+    color: white;
+    font-weight: bold 700px;
+    font-family: SF Pro Text Bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.search {
+    font-family: SF Pro Text;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0px;
+    justify-content: space-between;
+}
+
+.search a {
+    color: white;
+    text-decoration: none;
+}
+.search a:hover{
+    text-decoration: underline;
+}
+
+.searchInput {
+    border-radius: 5px;
+    padding: 8px 12px 8px 40px;
+    font-family: SF Pro Text;
+    width: 100%;
+}
+
+.searchImg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.searchAll {
+    flex: 1;
+    position: relative;
+    max-width: 500px;
+}
+
+.cart {
+    padding: 8px 14px 8px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-family: SF Pro Text;
+    font-size: 15px;
+    font-weight: 500;
+    gap: 5px;
+}
+.cart:hover{
+    cursor: pointer;
+}

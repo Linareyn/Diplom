@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('../font/SF\ Pro\ Text/SFProText-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../font/SF\ Pro\ Display/SF-Pro-Display-Regular.otf');
+}
+
+@font-face {
+    font-family: 'SF Pro Text Bold';
+    src: url('../font/SF\ Pro\ Text/SFProText-Bold.ttf');
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
