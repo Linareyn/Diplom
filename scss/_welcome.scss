@@ -1,0 +1,65 @@
+.mainFon {
+    background-color: white;
+}
+
+.titleMain {
+    font-family: SF Pro Display;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #202223;
+    margin-bottom: 32px;
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 67px;
+    & p {
+        font-family: SF Pro Text;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0px;
+    }
+
+    & span {
+        font-weight: 700;
+    }
+}
+
+.selectProduct {
+    color: white;
+    background-color: #00A0AC;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 12px 24px 12px 24px;
+    border-radius: 5px;
+    box-shadow: 0px -1px 0px 0px #00000033 inset, 0px 1px 0px 0px #00000014;
+    width: 155px;
+}
+.mainAll{
+display: flex;
+}
+.description{
+    display: flex;
+    margin-bottom: 32px;
+    gap: 40px;
+    & p{
+        border-left: 2px solid rgba(152, 198, 205, 1);
+        padding-left: 8px;
+    }
+}
+.mainImg{
+    margin-top: 32px;
+    margin-bottom: 40px;
+    & img {
+        height: 377px;
+        width: 573px;
+    }
+}

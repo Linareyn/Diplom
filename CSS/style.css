@@ -1,8 +1,78 @@
 * {
-  box-sizing: border-box;
+  padding: 0;
   margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+footer, header, aside {
+  display: block;
+}
+
+html, body {
+  color: black;
+  min-height: 100%;
+  background: rgb(246, 246, 247);
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
   padding: 0;
   border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
 }
 
 @font-face {
@@ -11,11 +81,15 @@
 }
 @font-face {
   font-family: "SF Pro Display";
-  src: url("../font/SF Pro Display/SF-Pro-Display-Regular.otf");
+  src: url("../font/SF Pro Display/SF-Pro-Display-Bold.otf");
 }
 @font-face {
   font-family: "SF Pro Text Bold";
   src: url("../font/SF Pro Text/SFProText-Bold.ttf");
+}
+@font-face {
+  font-family: "SF Pro Text Medium";
+  src: url("../font/SF Pro Text/SFProText-Medium.ttf");
 }
 .container {
   max-width: 1200px;
@@ -143,7 +217,12 @@ header {
   justify-content: space-between;
 }
 
-.search a {
+.navigation {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+.navigation a {
   color: white;
   text-decoration: none;
 }
@@ -183,8 +262,170 @@ header {
   font-size: 15px;
   font-weight: 500;
   gap: 5px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
 }
 
 .cart:hover {
   cursor: pointer;
+}
+
+.animal {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  justify-content: space-between;
+}
+.animal a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: SF Pro Text;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: rgb(32, 34, 35);
+  width: 214px;
+  height: 84px;
+  background-color: white;
+  margin: 24px 0px;
+  border-radius: 5px;
+}
+
+.fonAnimal {
+  background-color: rgb(246, 246, 247);
+}
+
+.animalList {
+  display: flex;
+  gap: 24px;
+}
+
+.mainFon {
+  background-color: white;
+}
+
+.titleMain {
+  font-family: SF Pro Display;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0px;
+  color: #202223;
+  margin-bottom: 32px;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 67px;
+}
+.mainInfo p {
+  font-family: SF Pro Text;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+}
+.mainInfo span {
+  font-weight: 700;
+}
+
+.selectProduct {
+  color: white;
+  background-color: #00A0AC;
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 12px 24px 12px 24px;
+  border-radius: 5px;
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.2) inset, 0px 1px 0px 0px rgba(0, 0, 0, 0.0784313725);
+  width: 155px;
+}
+
+.mainAll {
+  display: flex;
+}
+
+.description {
+  display: flex;
+  margin-bottom: 32px;
+  gap: 40px;
+}
+.description p {
+  border-left: 2px solid rgb(152, 198, 205);
+  padding-left: 8px;
+}
+
+.mainImg {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.mainImg img {
+  height: 377px;
+  width: 573px;
+}
+
+.giftFon {
+  background-color: rgb(246, 246, 247);
+}
+
+.giftPromotion {
+  display: flex;
+  gap: 32px;
+  margin-top: 56px;
+  margin-bottom: 61px;
+}
+.giftPromotion a {
+  font-family: SF Pro Text Medium;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgb(32, 34, 35);
+  border: solid 1px rgb(140, 145, 150);
+  border-radius: 5px;
+  padding: 8px 16px;
+  background-color: rgb(255, 255, 255);
+  max-width: 216px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.giftPromotion p {
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.promotion {
+  display: flex;
+  background: #FFD79D;
+}
+
+.gift {
+  display: flex;
+  background: #AEE9D1;
+}
+
+.promotionCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.giftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
 }/*# sourceMappingURL=style.css.map */

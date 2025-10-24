@@ -1,8 +1,78 @@
 * {
-  box-sizing: border-box;
+  padding: 0;
   margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+footer, header, aside {
+  display: block;
+}
+
+html, body {
+  color: black;
+  min-height: 100%;
+  background: rgb(246, 246, 247);
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
   padding: 0;
   border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
 }
 
 @font-face {
@@ -11,11 +81,15 @@
 }
 @font-face {
   font-family: "SF Pro Display";
-  src: url("../font/SF Pro Display/SF-Pro-Display-Regular.otf");
+  src: url("../font/SF Pro Display/SF-Pro-Display-Bold.otf");
 }
 @font-face {
   font-family: "SF Pro Text Bold";
   src: url("../font/SF Pro Text/SFProText-Bold.ttf");
+}
+@font-face {
+  font-family: "SF Pro Text Medium";
+  src: url("../font/SF Pro Text/SFProText-Medium.ttf");
 }
 .container {
   max-width: 1200px;
@@ -143,7 +217,12 @@ header {
   justify-content: space-between;
 }
 
-.search a {
+.navigation {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+.navigation a {
   color: white;
   text-decoration: none;
 }
@@ -183,6 +262,9 @@ header {
   font-size: 15px;
   font-weight: 500;
   gap: 5px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
 }
 
 .cart:hover {
