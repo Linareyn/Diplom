@@ -1,0 +1,35 @@
+.popularBrand {
+    font-family: SF Pro Display;
+    font-weight: 600;
+    font-style: Semibold;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    margin-bottom: 24px;
+}
+
+.moreBrands {
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: white;
+    padding: 12px 24px;
+    background-color: #00A0AC;
+    border-radius: 4px;
+    margin-top: 24px;
+    margin-bottom: 56px;
+}
+
+.brands {
+    & img {
+        padding: 14px 20px;
+        background-color: white;
+    }
+    & ul{
+        display: flex;
+        gap: 24px;
+    }
+}

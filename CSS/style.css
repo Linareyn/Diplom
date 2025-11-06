@@ -428,4 +428,287 @@ header {
   flex-direction: column;
   gap: 16px;
   padding: 24px;
+}
+
+.popular {
+  font-family: SF Pro Display;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.moreCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moreProduct {
+  color: rgb(255, 255, 255);
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 13px 25px;
+  background-color: rgb(0, 160, 172);
+  border-radius: 4px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.08), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 236px;
+  margin-top: 24px;
+  margin-bottom: 56px;
+}
+
+.popularButton {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.popularButton button {
+  padding: 10px;
+  border-radius: 40px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.popularButton button:hover {
+  background-color: rgb(0, 160, 172);
+}
+.popularButton button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.buttonLR {
+  display: flex;
+  gap: 16px;
+}
+
+.prevProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.priceBuy {
+  gap: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  max-width: 270px;
+  max-height: 392px;
+  padding: 8px;
+}
+.cardProduct--white {
+  background-color: white;
+}
+.cardProduct img {
+  max-height: 130px;
+  max-width: 254px;
+}
+.cardProduct h2 {
+  color: rgb(0, 0, 0);
+  font-family: SF Pro Text Bold;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  cursor: pointer;
+}
+.cardProduct h2:hover {
+  color: rgb(0, 160, 172);
+}
+.cardProduct .buy1click {
+  padding: 9px 73px;
+  background-color: white;
+  border: 1px solid rgb(0, 160, 172);
+  border-radius: 5px;
+  display: flex;
+  gap: 11px;
+}
+.cardProduct .cart {
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: rgb(186, 191, 195);
+  background-color: white;
+  padding: 5px 5px 5px 12px;
+  cursor: pointer;
+}
+.cardProduct .cart:hover {
+  background-color: white;
+  border-color: rgb(186, 191, 195);
+  color: inherit;
+}
+.cardProduct button {
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding: 2px 8px;
+  background-color: rgb(228, 229, 231);
+}
+.cardProduct button:hover {
+  background-color: rgb(0, 160, 172);
+  color: white;
+}
+.cardProduct span {
+  font-family: SF Pro Text Bold;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.priceCart {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.product {
+  display: flex;
+  gap: 30px;
+}
+
+.fonNew {
+  background-color: white;
+}
+
+.buttonLRnew-button {
+  background-color: rgb(246, 246, 247);
+}
+
+.NewStaf {
+  font-family: SF Pro Display;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.buttonLRnew {
+  display: flex;
+  gap: 16px;
+  color: #F6F6F7;
+}
+
+.NewButton {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0px;
+}
+.NewButton button {
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #F6F6F7;
+  transition: all 0.3s ease;
+}
+.NewButton button:hover {
+  background-color: rgb(0, 160, 172);
+}
+.NewButton button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.cardProduct--grey {
+  background-color: #FAFBFB;
+}
+
+.popularBrand {
+  font-family: SF Pro Display;
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  margin-bottom: 24px;
+}
+
+.moreBrands {
+  font-family: SF Pro Text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: white;
+  padding: 12px 24px;
+  background-color: #00A0AC;
+  border-radius: 4px;
+  margin-top: 24px;
+  margin-bottom: 56px;
+}
+
+.brands img {
+  padding: 14px 20px;
+  background-color: white;
+}
+.brands ul {
+  display: flex;
+  gap: 24px;
+}
+
+.fonReviews {
+  background-color: white;
+}
+
+.mainReview {
+  font-family: SF Pro Display;
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0px;
+}
+
+.buttonReview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 22px;
+  padding-bottom: 16px;
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #916A00;
+  gap: 48px;
+}
+.buttonReview button {
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

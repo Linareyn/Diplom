@@ -1,0 +1,54 @@
+.fonReviews {
+    background-color: white;
+}
+
+.mainReview {
+    font-family: SF Pro Display;
+    font-weight: 600;
+    font-style: Semibold;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0px;
+}
+
+.buttonReview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 22px;
+    padding-bottom: 16px;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    color: #916A00;
+    gap: 48px;
+    & button{
+        border-radius: 40px;
+        padding: 10px;
+    }
+
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0px;
+    text-align: center;
+
+}
