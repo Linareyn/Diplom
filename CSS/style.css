@@ -634,6 +634,7 @@ header {
   line-height: 32px;
   letter-spacing: 0px;
   margin-bottom: 24px;
+  margin-top: 56px;
 }
 
 .moreBrands {
@@ -711,4 +712,151 @@ header {
   line-height: 140%;
   letter-spacing: 0px;
   text-align: center;
+}
+
+.usefulArticle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 28px;
+}
+.usefulArticle h2 {
+  font-family: SF Pro Display;
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0px;
+}
+.usefulArticle button {
+  border-radius: 40px;
+  background-color: white;
+  padding: 10px;
+}
+
+.article {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 16px;
+  gap: 16px;
+}
+.article h3 {
+  font-family: SF Pro Text;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+.article p {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0px;
+}
+
+.readTime {
+  display: flex;
+  color: #8C9196;
+  justify-content: space-between;
+}
+.readTime div {
+  display: flex;
+  gap: 6px;
+}
+.readTime img {
+  width: 16px;
+  height: 16px;
+}
+
+.centerArticle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+
+.moreArticle {
+  font-family: SF Pro Text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: white;
+  padding: 12px 24px;
+  background-color: #00A0AC;
+  border-radius: 4px;
+}
+
+.articleList {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.articalText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fonInfo {
+  background-color: white;
+  margin-bottom: 56px;
+}
+
+.info {
+  display: flex;
+  gap: 110px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.about h2 {
+  font-family: SF Pro Display;
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0px;
+}
+.about h3 {
+  font-family: SF Pro Text;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0px;
+}
+.about p {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0px;
+}
+
+.aboutMarket {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aboutProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-left: 2px solid #98C6CD;
+  padding-left: 12px;
 }/*# sourceMappingURL=style.css.map */

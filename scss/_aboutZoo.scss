@@ -1,0 +1,61 @@
+.fonInfo {
+    background-color: white;
+    margin-bottom: 56px;
+}
+
+.info {
+    display: flex;
+    gap: 110px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+
+    & h2 {
+        font-family: SF Pro Display;
+        font-weight: 600;
+        font-style: Semibold;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 0px;
+
+    }
+
+    & h3 {
+        font-family: SF Pro Text;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0px;
+
+    }
+
+    & p {
+        font-family: SF Pro Text;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0px;
+
+    }
+}
+
+.aboutMarket {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.aboutProduct {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-left: 2px solid #98C6CD;
+    padding-left: 12px;
+}
