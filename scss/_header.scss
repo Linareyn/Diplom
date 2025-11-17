@@ -53,6 +53,14 @@ header {
     font-weight: 400;
     display: flex;
     gap: 6px;
+    & p{
+         white-space: nowrap;
+    }
+
+    & span {
+        color: #8C9196;
+    }
+
 }
 
 .clockImg {

@@ -4,23 +4,30 @@
   border: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
   outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none;
 }
 
-footer, header, aside {
+footer,
+header,
+aside {
   display: block;
 }
 
-html, body {
+html,
+body {
   color: black;
   min-height: 100%;
   background: rgb(246, 246, 247);
@@ -37,7 +44,9 @@ body {
   overflow-x: hidden;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
   font-family: inherit;
 }
 
@@ -54,7 +63,8 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -70,7 +80,12 @@ img {
   vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: 400;
 }
@@ -90,6 +105,14 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
   font-family: "SF Pro Text Medium";
   src: url("../font/SF Pro Text/SFProText-Medium.ttf");
+}
+@font-face {
+  font-family: "SF Pro Text Semi-bold";
+  src: url("../font/SF Pro Text/SFProText-Semibold.ttf");
+}
+@font-face {
+  font-family: "SF-Pro-Display-Semibold";
+  src: url("../font/SF Pro Display/SF-Pro-Display-Semibold.otf");
 }
 .container {
   max-width: 1200px;
@@ -152,6 +175,12 @@ header {
   font-weight: 400;
   display: flex;
   gap: 6px;
+}
+.workTime p {
+  white-space: nowrap;
+}
+.workTime span {
+  color: #8C9196;
 }
 
 .clockImg {

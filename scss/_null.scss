@@ -4,25 +4,32 @@
   border: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
   outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none;
 }
 
-footer, header, aside {
+footer,
+header,
+aside {
   display: block;
 }
 
-html, body {
+html,
+body {
   color: black;
   min-height: 100%;
   background: rgba(246, 246, 247, 1);
@@ -39,7 +46,9 @@ body {
   overflow-x: hidden;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
   font-family: inherit;
 }
 
@@ -56,7 +65,8 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -72,33 +82,49 @@ img {
   vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: 400;
 }
 
 @font-face {
-    font-family: 'SF Pro Text';
-    src: url('../font/SF\ Pro\ Text/SFProText-Regular.ttf');
+  font-family: 'SF Pro Text';
+  src: url('../font/SF\ Pro\ Text/SFProText-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'SF Pro Display';
-    src: url('../font/SF\ Pro\ Display/SF-Pro-Display-Bold.otf');
+  font-family: 'SF Pro Display';
+  src: url('../font/SF\ Pro\ Display/SF-Pro-Display-Bold.otf');
 }
 
 @font-face {
-    font-family: 'SF Pro Text Bold';
-    src: url('../font/SF\ Pro\ Text/SFProText-Bold.ttf');
+  font-family: 'SF Pro Text Bold';
+  src: url('../font/SF\ Pro\ Text/SFProText-Bold.ttf');
 }
+
 @font-face {
   font-family: 'SF Pro Text Medium';
   src: url('../font/SF\ Pro\ Text/SFProText-Medium.ttf');
 }
 
+@font-face {
+  font-family: 'SF Pro Text Semi-bold';
+  src: url('../font/SF\ Pro\ Text/SFProText-Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'SF-Pro-Display-Semibold';
+  src: url('../font/SF\ Pro\ Display/SF-Pro-Display-Semibold.otf');
+}
+
 .container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0px 15px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 15px;
 }
