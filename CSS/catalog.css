@@ -298,4 +298,194 @@ header {
 
 .cart:hover {
   cursor: pointer;
+}
+
+.main {
+  color: white;
+}
+
+.animal {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  justify-content: space-between;
+}
+.animal a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: SF Pro Text;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: rgb(32, 34, 35);
+  width: 214px;
+  height: 84px;
+  background-color: white;
+  margin: 24px 0px;
+  border-radius: 5px;
+}
+
+.fonAnimal {
+  background-color: rgb(246, 246, 247);
+}
+
+.animalList {
+  display: flex;
+  gap: 24px;
+}
+.animalList li {
+  opacity: 1;
+}
+
+.navigationHead {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.navigationHead a {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.navMain {
+  color: #202223;
+}
+
+.navCatalog {
+  color: #6D7175;
+}
+
+.animal--catalog .animalList a {
+  margin: 0;
+}
+.animal--catalog .animalList li {
+  opacity: 0.6;
+  transition: all 0.3 ease;
+}
+.animal--catalog .animalList li:hover {
+  opacity: 0.9;
+}
+.animal--catalog .animalList li.active {
+  opacity: 1;
+  border: 2px solid #008060;
+  border-radius: 5px;
+}
+
+.catalogMain {
+  margin: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.catalogMain h1 {
+  font-family: SF Pro Display;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 42px;
+  line-height: 44px;
+  letter-spacing: 0px;
+}
+
+.custom-select {
+  position: relative;
+  width: 395px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.custom-select p {
+  font-family: SF Pro Text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+.custom-select.open .select-options {
+  display: block;
+}
+.custom-select.open .arrow img {
+  transform: rotate(180deg);
+}
+
+.select-header {
+  border: 1px solid #BABFC3;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  transition: all 0.3s ease;
+  padding: 8px 8px 8px 12px;
+  width: 268px;
+}
+.select-header:hover {
+  border-color: #00a0ac;
+}
+.select-header span:first-child {
+  font-family: SF Pro Text;
+  font-size: 14px;
+  color: #333;
+}
+.select-header .arrow {
+  display: flex;
+}
+.select-header .arrow img {
+  width: 12px;
+  height: 7px;
+  transition: transform 0.3s ease;
+}
+
+.select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.select-options .option {
+  padding: 8px 24px 8px 12px;
+  font-family: SF Pro Text;
+  font-size: 14px;
+  color: #202223;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f5f5f5;
+}
+.select-options .option:last-child {
+  border-bottom: none;
+}
+.select-options .option:hover {
+  background-color: #f8f9fa;
+  color: #00a0ac;
+}
+.select-options .option.active {
+  background-color: #00a0ac;
+  color: white;
+}
+
+.select-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: none;
+}
+.select-overlay.active {
+  display: block;
 }/*# sourceMappingURL=catalog.css.map */

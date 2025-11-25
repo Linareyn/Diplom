@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/catalog.css">
     <title>Каталог</title>
 </head>
+
 <body>
-     <header>
+    <header>
         <div class="container">
             <div class="hat">
                 <div class="contacts-hat">
@@ -55,6 +57,140 @@
             </div>
         </div>
     </header>
-Каталог
+
+    <div class="fonAnimal">
+        <div class="container">
+            <div class="navigationHead">
+                <a href="./index.html" class="navMain">Главная</a><img src="./image/chevron-right_minor.png" alt=""><a
+                    href="./catalog.html" class="navCatalog">Каталог</a>
+            </div>
+            <div class="animal animal--catalog">
+                <ul class="animalList">
+                    <li class="active"><a href=""><img src="./image/animal/dog.png" alt="">Собаки</a></li>
+                    <li> <a href=""><img src="./image/animal/cat.png" alt="">Кошки</a></li>
+                    <li><a href=""><img src="./image/animal/mouse.png" alt="">Грызуны</a></li>
+                    <li> <a href=""><img src="./image/animal/bird.png" alt="">Птицы</a></li>
+                    <li> <a href=""><img src="./image/animal/fish.png" alt="">Рыбки</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="catalogMain">
+            <h1>Каталог товаров для собак</h1>
+            <div class="custom-select">
+                <p>Сортировать по:</p>
+                <div class="select-header">
+                    <span>дате добавления</span>
+                    <span class="arrow"><img src="./image/arrowDown.png" alt=""></span>
+                </div>
+                <div class="select-options">
+                    <div class="option" data-value="new">дате добавления</div>
+                    <div class="option" data-value="A-Z">названию от А до Я </div>
+                    <div class="option" data-value="Z-A">названию от Я до А</div>
+                    <div class="option" data-value="price_asc">По цене (возрастание)</div>
+                    <div class="option" data-value="price_desc">По цене (убывание)</div>
+                    <div class="option" data-value="popular">популярности</div>
+                </div>
+            </div>
+        </div>
+        <div class="catalogPrewiew">
+            <div class="filters">
+                <div class="onlyPromotion">
+                    <input type="checkbox" name="" id="">
+                    <label for="">Только акционные товары</label>
+                </div>
+                <div class="typeProduct">
+                    <p>Тип товара</p>
+                    <ul>
+                        <li><input type="radio"><label for="">Корм</label>
+                            <ul>
+                                <li><input type="checkbox" name="" id=""><label for="">Сухой</label></li>
+                                <li><input type="checkbox" name="" id=""><label for="">Влажный</label></li>
+                            </ul>
+                        </li>
+                        <li><input type="radio"><label for="">Лакомства</label></li>
+                        <li><input type="radio"><label for="">Игрушки</label></li>
+                        <li><input type="radio"><label for="">Наполнитель</label></li>
+                        <li><input type="radio"><label for="">Гигиена и уход</label></li>
+                        <li><input type="radio"><label for="">Ветеринарная диета</label></li>
+                        <li><input type="radio"><label for="">Амуниция, витамины</label></li>
+                        <li><input type="radio"><label for="">Миски</label></li>
+                        <li><input type="radio"><label for="">Туалеты</label></li>
+                        <li><input type="radio"><label for="">Домики</label></li>
+                        <li><input type="radio"><label for="">Когтеточки</label></li>
+                    </ul>
+
+                </div>
+                <div class="byBrands">
+                    <p>Бренд</p>
+                    <div class="searchBrand">
+                        <img src="./image/Search.png" alt="" class="searchIcon">
+                        <input type="search" name="" id="" placeholder="Название бренда" class="searchBrandInput">
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" name="" id=""><label for="">AIRYVEST</label></li>
+                        <li><input type="checkbox" name="" id=""><label for="">BIOMILL</label></li>
+                        <li><input type="checkbox" name="" id=""><label for="">CAMON</label></li>
+                        <li><input type="checkbox" name="" id=""><label for="">CAT STEP</label></li>
+                        <li><input type="checkbox" name="" id=""><label for="">DENNERLE</label></li>
+                        <li><input type="checkbox" name="" id=""><label for="">ELATO</label></li>
+                        <li><input type="checkbox" name="" id=""><label for="">FIBRE FAMILY</label></li>
+                        <li><input type="checkbox" name="" id=""><label for="">GIMDOG</label></li>
+                        <li><input type="checkbox" name="" id=""><label for="">HAPPY FRIENDS</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="catalogList">
+
+                 <div class="cardProduct cardProduct--white">
+                    <div class="prevProduct">
+                        <img src="./image/пример.png" alt="">
+                        <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
+                    </div>
+                    <div>
+                        <button>6 л.</button>
+                        <button>12 л.</button>
+                        <button>18 л.</button>
+                        <button>30 л.</button>
+                    </div>
+                    <div class="priceBuy">
+                        <div class="priceCart">
+                            <span>95 BYN</span>
+                            <button class="cart">
+                                + <img src="./image/cart_major.png" alt="Корзина">
+                            </button>
+                        </div>
+                        <button class="buy1click">Купить в 1 клик</button>
+                    </div>
+
+                     <div class="cardProduct cardProduct--white">
+                    <div class="prevProduct">
+                        <img src="./image/пример.png" alt="">
+                        <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
+                    </div>
+                    <div>
+                        <button>6 л.</button>
+                        <button>12 л.</button>
+                        <button>18 л.</button>
+                        <button>30 л.</button>
+                    </div>
+                    <div class="priceBuy">
+                        <div class="priceCart">
+                            <span>95 BYN</span>
+                            <button class="cart">
+                                + <img src="./image/cart_major.png" alt="Корзина">
+                            </button>
+                        </div>
+                        <button class="buy1click">Купить в 1 клик</button>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

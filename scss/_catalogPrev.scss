@@ -1,0 +1,153 @@
+.animal--catalog {
+    .animalList {
+        & a {
+            margin: 0;
+        }
+
+        & li {
+            opacity: 0.6;
+            transition: all 0.3 ease;
+
+            &:hover {
+                opacity: 0.9;
+            }
+
+            &.active {
+                opacity: 1;
+                border: 2px solid #008060;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.catalogMain {
+    margin: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-family: SF Pro Display;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 42px;
+        line-height: 44px;
+        letter-spacing: 0px;
+
+    }
+}
+
+.custom-select {
+    position: relative;
+    width: 395px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & p {
+        font-family: SF Pro Text;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0px;
+
+    }
+
+    &.open {
+        .select-options {
+            display: block;
+        }
+
+        .arrow img {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.select-header {
+    border: 1px solid #BABFC3;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: all 0.3s ease;
+    padding: 8px 8px 8px 12px;
+    width: 268px;
+
+
+    &:hover {
+        border-color: #00a0ac;
+    }
+
+    span:first-child {
+        font-family: SF Pro Text;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .arrow {
+        display: flex;
+        
+
+        img {
+            width: 12px;
+            height: 7px;
+            transition: transform 0.3s ease;
+        }
+    }
+}
+
+.select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+
+    .option {
+        padding: 8px 24px 8px 12px;
+        font-family: SF Pro Text;
+        font-size: 14px;
+        color: #202223;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid #f5f5f5;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background-color: #f8f9fa;
+            color: #00a0ac;
+        }
+
+        &.active {
+            background-color: #00a0ac;
+            color: white;
+        }
+    }
+}
+
+.select-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
