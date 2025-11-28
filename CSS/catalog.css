@@ -488,4 +488,570 @@ header {
 }
 .select-overlay.active {
   display: block;
+}
+
+.catalogPrewiew {
+  display: flex;
+  gap: 30px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 4px;
+}
+.checkbox span {
+  font-family: SF Pro Text Medium;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+.checkbox input {
+  display: none;
+}
+.checkbox input:checked + .custom-checkbox {
+  background-color: #008060;
+  border-color: #008060;
+}
+.checkbox input:checked + .custom-checkbox::after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+.checkbox input:disabled + .custom-checkbox {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+.checkbox input:disabled + .custom-checkbox::after {
+  border-color: #999;
+}
+
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #8C9196;
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+  transition: all 0.2s ease;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.radio input {
+  display: none;
+}
+.radio input:checked + .custom-radio {
+  border-color: #008060;
+}
+.radio input:checked + .custom-radio::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  background: #008060;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #8C9196;
+  border-radius: 100px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  background: #008060;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.typeProduct {
+  width: 270px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 16px 16px 2px 16px;
+}
+.typeProduct .food {
+  margin-top: 8px;
+}
+.typeProduct .food li {
+  margin-bottom: 6px;
+  margin-left: 24px;
+}
+.typeProduct li {
+  margin-bottom: 14px;
+}
+.typeProduct p {
+  font-family: SF Pro Text;
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  margin-bottom: 16px;
+}
+.typeProduct span {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.byBrands {
+  margin-top: 24px;
+  background-color: white;
+  padding: 16px 16px 0px 16px;
+}
+.byBrands p {
+  font-family: SF Pro Text;
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  padding-bottom: 16px;
+}
+.byBrands span {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+.byBrands li {
+  margin-bottom: 16px;
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchBrand {
+  padding-bottom: 16px;
+}
+.searchBrand img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.searchBrandInput {
+  width: 238px;
+  padding: 8px 12px 8px 40px;
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  border: 1px solid #A7ACB1;
+  border-radius: 4px;
+}
+
+.promotionOnly {
+  padding: 18px 16px;
+  background-color: white;
+  border-radius: 5px;
+  width: 270px;
+  margin-bottom: 24px;
+}
+
+.catalogList {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 24px;
+  align-content: flex-start;
+}
+
+.scrollCatalog {
+  display: flex;
+  margin-top: 24px;
+  justify-content: space-between;
+  color: #00A0AC;
+  font-family: SF Pro Text Medium;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.scrollCatalog ul {
+  display: flex;
+  gap: 32px;
+}
+.scrollCatalog .back {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.scrollCatalog .next {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.popularCatalog {
+  margin: 56px 0px;
+}
+
+.popular {
+  font-family: SF Pro Display;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.moreCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moreProduct {
+  color: rgb(255, 255, 255);
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 13px 25px;
+  background-color: rgb(0, 160, 172);
+  border-radius: 4px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.08), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 236px;
+  margin-top: 24px;
+  margin-bottom: 56px;
+}
+
+.popularButton {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.popularButton button {
+  padding: 10px;
+  border-radius: 40px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.popularButton button:hover {
+  background-color: rgb(0, 160, 172);
+}
+.popularButton button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.buttonLR {
+  display: flex;
+  gap: 16px;
+}
+
+.prevProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.priceBuy {
+  gap: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  max-width: 270px;
+  max-height: 392px;
+  padding: 8px;
+}
+.cardProduct--white {
+  background-color: white;
+}
+.cardProduct img {
+  max-height: 130px;
+  max-width: 254px;
+}
+.cardProduct h2 {
+  color: rgb(0, 0, 0);
+  font-family: SF Pro Text Bold;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  cursor: pointer;
+}
+.cardProduct h2:hover {
+  color: rgb(0, 160, 172);
+}
+.cardProduct .buy1click {
+  padding: 9px 73px;
+  background-color: white;
+  border: 1px solid rgb(0, 160, 172);
+  border-radius: 5px;
+  display: flex;
+  gap: 11px;
+}
+.cardProduct .cart {
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: rgb(186, 191, 195);
+  background-color: white;
+  padding: 5px 5px 5px 12px;
+  cursor: pointer;
+}
+.cardProduct .cart:hover {
+  background-color: white;
+  border-color: rgb(186, 191, 195);
+  color: inherit;
+}
+.cardProduct button {
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding: 2px 8px;
+  background-color: rgb(228, 229, 231);
+}
+.cardProduct button:hover {
+  background-color: rgb(0, 160, 172);
+  color: white;
+}
+.cardProduct span {
+  font-family: SF Pro Text Bold;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.priceCart {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.product {
+  display: flex;
+  gap: 30px;
+}
+
+.usefulArticle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 28px;
+}
+.usefulArticle h2 {
+  font-family: SF Pro Display;
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0px;
+}
+.usefulArticle button {
+  border-radius: 40px;
+  background-color: white;
+  padding: 10px;
+}
+
+.article {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 16px;
+  gap: 16px;
+}
+.article h3 {
+  font-family: SF Pro Text;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+.article p {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0px;
+}
+
+.readTime {
+  display: flex;
+  color: #8C9196;
+  justify-content: space-between;
+}
+.readTime div {
+  display: flex;
+  gap: 6px;
+}
+.readTime img {
+  width: 16px;
+  height: 16px;
+}
+
+.centerArticle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+
+.moreArticle {
+  font-family: SF Pro Text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: white;
+  padding: 12px 24px;
+  background-color: #00A0AC;
+  border-radius: 4px;
+}
+
+.articleList {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.articalText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+footer {
+  background-color: white;
+  padding-top: 16px;
+}
+
+.navFooter {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #D2D5D8;
+  padding-bottom: 16px;
+}
+
+.zooFoot {
+  color: black;
+  font-weight: bold 700px;
+  font-family: SF Pro Text Bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.zooFoot span {
+  color: rgb(0, 128, 96);
+}
+
+.navigationFoot {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+.navigationFoot a {
+  color: black;
+  text-decoration: none;
+  font-family: SF Pro Text Medium;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.contacts-foot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+.contacts-foot p {
+  font-size: 14px;
+}
+.contacts-foot a {
+  font-size: 14px;
+}
+.contacts-foot .callBack {
+  font-size: 16px;
+}
+
+.footInfo {
+  margin: 16px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.footInfo p {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #8C9196;
+}
+.footInfo span {
+  color: #2C6ECB;
 }/*# sourceMappingURL=catalog.css.map */

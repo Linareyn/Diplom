@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+     <header>
         <div class="container">
             <div class="hat">
                 <div class="contacts-hat">
@@ -28,8 +28,10 @@
                     <div class="workTime">
                         <img src="./image/clock_minor.png" alt="" class="clockImg">
                         <p>
-                            Пон.-Пят. 10:00-21:00 | Суб.-Вос. 10:00-20:00
+                            Пон.-Пят. 10:00-21:00
                         </p>
+                        <span>|</span>
+                        <p>Суб.-Вос. 10:00-20:00</p>
                     </div>
                     <div class="phone">
                         <img src="./image/mobile_major.png" alt="" class="mobileImg">
@@ -48,11 +50,15 @@
                         <img src="./image/Search.png" alt="" class="searchImg">
                         <input type="search" name="" id="" placeholder="Поиск" class="searchInput">
                     </div>
-                    <a href="./index.html" class="main">Главная</a>
-                    <a href="./catalog.html" class="main">Каталог</a>
-                    <a href="" class="main">Акции</a>
-                    <a href="" class="main">Статьи</a>
-                    <button class="cart"><img src="./image/cart_major.png" alt="" class="cartImg"> 0 </button>
+                    <nav>
+                        <ul class="navigation">
+                            <li><a href="./index.html" class="main">Главная</a></li>
+                            <li><a href="./catalog.html" class="main">Каталог</a></li>
+                            <li><a href="" class="main">Акции</a></li>
+                            <li><a href="" class="main">Статьи</a></li>
+                        </ul>
+                    </nav>
+                    <a href="" class="cart"><img src="./image/cart_major.png" alt="" class="cartImg"> 0 </a>
                 </div>
             </div>
         </div>
@@ -96,101 +102,389 @@
         </div>
         <div class="catalogPrewiew">
             <div class="filters">
-                <div class="onlyPromotion">
-                    <input type="checkbox" name="" id="">
-                    <label for="">Только акционные товары</label>
+                <div class="promotionOnly">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" id="">
+                        <div class="custom-checkbox"></div>
+                        <span>Только акционные товары</span>
+                    </label>
                 </div>
                 <div class="typeProduct">
                     <p>Тип товара</p>
                     <ul>
-                        <li><input type="radio"><label for="">Корм</label>
-                            <ul>
-                                <li><input type="checkbox" name="" id=""><label for="">Сухой</label></li>
-                                <li><input type="checkbox" name="" id=""><label for="">Влажный</label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Корм</span>
+                            </label>
+                            <ul class="food">
+                                <li><label class="checkbox">
+                                        <input type="checkbox" name="" id="">
+                                        <div class="custom-checkbox"></div>
+                                        <span>Сухой</span>
+                                    </label></li>
+                                <li><label class="checkbox">
+                                        <input type="checkbox" name="" id="">
+                                        <div class="custom-checkbox"></div>
+                                        <span>Влажный</span>
+                                    </label></li>
                             </ul>
                         </li>
-                        <li><input type="radio"><label for="">Лакомства</label></li>
-                        <li><input type="radio"><label for="">Игрушки</label></li>
-                        <li><input type="radio"><label for="">Наполнитель</label></li>
-                        <li><input type="radio"><label for="">Гигиена и уход</label></li>
-                        <li><input type="radio"><label for="">Ветеринарная диета</label></li>
-                        <li><input type="radio"><label for="">Амуниция, витамины</label></li>
-                        <li><input type="radio"><label for="">Миски</label></li>
-                        <li><input type="radio"><label for="">Туалеты</label></li>
-                        <li><input type="radio"><label for="">Домики</label></li>
-                        <li><input type="radio"><label for="">Когтеточки</label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Лакомства</span>
+                            </label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Игрушки</span>
+                            </label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Наполнитель</span>
+                            </label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Гигиена и уход</span>
+                            </label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Ветеринарная диета</span>
+                            </label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Амуниция, витамины</span>
+                            </label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Миски</span>
+                            </label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Туалеты</span>
+                            </label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Домики</span>
+                            </label></li>
+                        <li><label class="radio"><input type="radio" name="sort" id="">
+                                <div class="custom-radio"></div><span>Когтеточки</span>
+                            </label></li>
                     </ul>
 
                 </div>
                 <div class="byBrands">
                     <p>Бренд</p>
                     <div class="searchBrand">
-                        <img src="./image/Search.png" alt="" class="searchIcon">
-                        <input type="search" name="" id="" placeholder="Название бренда" class="searchBrandInput">
+                        <div class="searchWrapper">
+                            <img src="./image/Search.png" alt="" class="searchIcon">
+                            <input type="search" name="" id="" placeholder="Название бренда" class="searchBrandInput">
+                        </div>
                     </div>
                     <ul>
-                        <li><input type="checkbox" name="" id=""><label for="">AIRYVEST</label></li>
-                        <li><input type="checkbox" name="" id=""><label for="">BIOMILL</label></li>
-                        <li><input type="checkbox" name="" id=""><label for="">CAMON</label></li>
-                        <li><input type="checkbox" name="" id=""><label for="">CAT STEP</label></li>
-                        <li><input type="checkbox" name="" id=""><label for="">DENNERLE</label></li>
-                        <li><input type="checkbox" name="" id=""><label for="">ELATO</label></li>
-                        <li><input type="checkbox" name="" id=""><label for="">FIBRE FAMILY</label></li>
-                        <li><input type="checkbox" name="" id=""><label for="">GIMDOG</label></li>
-                        <li><input type="checkbox" name="" id=""><label for="">HAPPY FRIENDS</label></li>
+                        <li><label class="checkbox">
+                                <input type="checkbox" name="" id="">
+                                <div class="custom-checkbox"></div>
+                                <span>AIRYVEST</span>
+                            </label></li>
+                        <li><label class="checkbox">
+                                <input type="checkbox" name="" id="">
+                                <div class="custom-checkbox"></div>
+                                <span>BIOMILL</span>
+                            </label></li>
+                        <li><label class="checkbox">
+                                <input type="checkbox" name="" id="">
+                                <div class="custom-checkbox"></div>
+                                <span>CAMON</span>
+                            </label></li>
+                        <li><label class="checkbox">
+                                <input type="checkbox" name="" id="">
+                                <div class="custom-checkbox"></div>
+                                <span>CAT STEP</span>
+                            </label></li>
+                        <li><label class="checkbox">
+                                <input type="checkbox" name="" id="">
+                                <div class="custom-checkbox"></div>
+                                <span>DENNERLE</span>
+                            </label></li>
+                        <li><label class="checkbox">
+                                <input type="checkbox" name="" id="">
+                                <div class="custom-checkbox"></div>
+                                <span>ELATO</span>
+                            </label></li>
+                        <li><label class="checkbox">
+                                <input type="checkbox" name="" id="">
+                                <div class="custom-checkbox"></div>
+                                <span>FIBRE FAMILY</span>
+                            </label></li>
+                        <li><label class="checkbox">
+                                <input type="checkbox" name="" id="">
+                                <div class="custom-checkbox"></div>
+                                <span>GIMDOG</span>
+                            </label></li>
+                        <li><label class="checkbox">
+                                <input type="checkbox" name="" id="">
+                                <div class="custom-checkbox"></div>
+                                <span>HAPPY FRIENDS</span>
+                            </label></li>
                     </ul>
                 </div>
             </div>
-            <div class="catalogList">
-
-                 <div class="cardProduct cardProduct--white">
-                    <div class="prevProduct">
-                        <img src="./image/пример.png" alt="">
-                        <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
-                    </div>
-                    <div>
-                        <button>6 л.</button>
-                        <button>12 л.</button>
-                        <button>18 л.</button>
-                        <button>30 л.</button>
-                    </div>
-                    <div class="priceBuy">
-                        <div class="priceCart">
-                            <span>95 BYN</span>
-                            <button class="cart">
-                                + <img src="./image/cart_major.png" alt="Корзина">
-                            </button>
+            <div>
+                <div class="catalogList">
+                    <div class="cardProduct cardProduct--white">
+                        <div class="prevProduct">
+                            <img src="./image/пример.png" alt="">
+                            <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
                         </div>
-                        <button class="buy1click">Купить в 1 клик</button>
-                    </div>
-
-                     <div class="cardProduct cardProduct--white">
-                    <div class="prevProduct">
-                        <img src="./image/пример.png" alt="">
-                        <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
-                    </div>
-                    <div>
-                        <button>6 л.</button>
-                        <button>12 л.</button>
-                        <button>18 л.</button>
-                        <button>30 л.</button>
-                    </div>
-                    <div class="priceBuy">
-                        <div class="priceCart">
-                            <span>95 BYN</span>
-                            <button class="cart">
-                                + <img src="./image/cart_major.png" alt="Корзина">
-                            </button>
+                        <div>
+                            <button>6 л.</button>
+                            <button>12 л.</button>
+                            <button>18 л.</button>
+                            <button>30 л.</button>
                         </div>
-                        <button class="buy1click">Купить в 1 клик</button>
+                        <div class="priceBuy">
+                            <div class="priceCart">
+                                <span>95 BYN</span>
+                                <button class="cart">
+                                    + <img src="./image/cart_major.png" alt="Корзина">
+                                </button>
+                            </div>
+                            <button class="buy1click">Купить в 1 клик</button>
+                        </div>
                     </div>
 
+                    <div class="cardProduct cardProduct--white">
+                        <div class="prevProduct">
+                            <img src="./image/пример.png" alt="">
+                            <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
+                        </div>
+                        <div>
+                            <button>6 л.</button>
+                            <button>12 л.</button>
+                            <button>18 л.</button>
+                            <button>30 л.</button>
+                        </div>
+                        <div class="priceBuy">
+                            <div class="priceCart">
+                                <span>95 BYN</span>
+                                <button class="cart">
+                                    + <img src="./image/cart_major.png" alt="Корзина">
+                                </button>
+                            </div>
+                            <button class="buy1click">Купить в 1 клик</button>
+                        </div>
+                    </div>
+
+                    <div class="cardProduct cardProduct--white">
+                        <div class="prevProduct">
+                            <img src="./image/пример.png" alt="">
+                            <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
+                        </div>
+                        <div>
+                            <button>6 л.</button>
+                            <button>12 л.</button>
+                            <button>18 л.</button>
+                            <button>30 л.</button>
+                        </div>
+                        <div class="priceBuy">
+                            <div class="priceCart">
+                                <span>95 BYN</span>
+                                <button class="cart">
+                                    + <img src="./image/cart_major.png" alt="Корзина">
+                                </button>
+                            </div>
+                            <button class="buy1click">Купить в 1 клик</button>
+                        </div>
+                    </div>
+
+                    <div class="cardProduct cardProduct--white">
+                        <div class="prevProduct">
+                            <img src="./image/пример.png" alt="">
+                            <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
+                        </div>
+                        <div>
+                            <button>6 л.</button>
+                            <button>12 л.</button>
+                            <button>18 л.</button>
+                            <button>30 л.</button>
+                        </div>
+                        <div class="priceBuy">
+                            <div class="priceCart">
+                                <span>95 BYN</span>
+                                <button class="cart">
+                                    + <img src="./image/cart_major.png" alt="Корзина">
+                                </button>
+                            </div>
+                            <button class="buy1click">Купить в 1 клик</button>
+                        </div>
+                    </div>
                 </div>
+                <div class="scrollCatalog">
+                    <div class="back">
+                        <img src="./image/chevron-left_minorCatalog.png" alt="">
+                        <p>Предыдущая</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                1
+                            </li>
+                            <li>
+                                2
+                            </li>
+                            <li>
+                                3
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="next">
+                        <p>Следующая</p>
+                        <img src="./image/chevron-right_minorCatalog.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popularCatalog">
+            <div class="popularButton">
+                <h2 class="popular">Популярные товары</h2>
+                <div class="buttonLR">
+                    <button><img src="./image/chevron-left_minor.png" alt=""></button>
+                    <button><img src="./image/chevron-right_minor.png" alt=""></button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="cardProduct cardProduct--white">
+                    <div class="prevProduct">
+                        <img src="./image/пример.png" alt="">
+                        <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
+                    </div>
+                    <div>
+                        <button>6 л.</button>
+                        <button>12 л.</button>
+                        <button>18 л.</button>
+                        <button>30 л.</button>
+                    </div>
+                    <div class="priceBuy">
+                        <div class="priceCart">
+                            <span>95 BYN</span>
+                            <button class="cart">
+                                + <img src="./image/cart_major.png" alt="Корзина">
+                            </button>
+                        </div>
+                        <button class="buy1click">Купить в 1 клик</button>
+                    </div>
+                </div>
+                <div class="cardProduct cardProduct--white">
+                    <div class="prevProduct">
+                        <img src="./image/пример.png" alt="">
+                        <h2>FRESH STEP CAT LITTER CLAY EXTREME – Фреш Степ наполнитель..</h2>
+                    </div>
+                    <div>
+                        <button>6 л.</button>
+                        <button>12 л.</button>
+                        <button>18 л.</button>
+                        <button>30 л.</button>
+                    </div>
+                    <div class="priceBuy">
+                        <div class="priceCart">
+                            <span>95 BYN</span>
+                            <button class="cart">
+                                + <img src="./image/cart_major.png" alt="Корзина">
+                            </button>
+                        </div>
+                        <button class="buy1click">Купить в 1 клик</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="usefulArticle">
+                    <h2>Полезные статьи</h2>
+                    <div class="buttonLR">
+                        <button><img src="./image/chevron-left_minor.png" alt=""></button>
+                        <button><img src="./image/chevron-right_minor.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="articleList">
+                    <div class="article">
+                        <img src="./image/пример_Статья.png" alt="">
+                        <div class="articalText">
+                            <h3>Обзор корма Hills (Хиллс) для собак</h3>
+                            <p>Продукция чешской компании «Хиллс» известна многим владельцам четвероногих питомцев. Она
+                                давно
+                                зарекомендовала себя на отечественном рынке. Рационы представлены...</p>
+                        </div>
+                        <div class="readTime">
+                            <div>
+                                <img src="./image/clock_minor.png" alt="">
+                                <p>Время чтения: 5 мин.</p>
+                            </div>
+                            <div>
+                                <img src="./image/calendar.png" alt="">
+                                <p>17 марта 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="./image/пример_Статья.png" alt="">
+                        <div class="articalText">
+                            <h3>Обзор корма Hills (Хиллс) для собак</h3>
+                            <p>Продукция чешской компании «Хиллс» известна многим владельцам четвероногих питомцев. Она
+                                давно
+                                зарекомендовала себя на отечественном рынке. Рационы представлены...</p>
+                        </div>
+                        <div class="readTime">
+                            <div>
+                                <img src="./image/clock_minor.png" alt="">
+                                <p>Время чтения: 5 мин.</p>
+                            </div>
+                            <div>
+                                <img src="./image/calendar.png" alt="">
+                                <p>17 марта 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="centerArticle">
+                    <a href="./article.html" class="moreArticle">Читать больше статей</a>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="container">
+            <div class="navFooter">
+                <div class="zooFoot"><img src="./image/logo footer.png" alt=""> ТЕРРИТОРИЯ <span>ZOO</span></div>
+                <nav>
+                    <ul class="navigationFoot">
+                        <li><a href="" class="main">Главная</a></li>
+                        <li><a href="./catalog.html" class="main">Каталог</a></li>
+                        <li><a href="" class="main">Акции</a></li>
+                        <li><a href="" class="main">Статьи</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contacts-foot">
+                <div class="location">
+                    <img src="./image/location_major.png" alt="" class="locationImg">
+                    <p>
+                        Минск, ул. Чюрлёниса, 6.
+                    </p>
+                    <img src="./image/metro.png" alt="" class="metroImg">
+                    <p>
+                        Малиновка
+                    </p>
+                </div>
+                <div class="phone">
+                    <img src="./image/mobile_major.png" alt="" class="mobileImg">
+                    <a href="">+ 375 (44) 501 03 55</a>
+                </div>
 
+                <div class="workTime">
+                    <img src="./image/clock_minor.png" alt="" class="clockImg">
+                    <p>
+                        Пон.-Пят. 10:00-21:00
+                    </p>
+                    <span>|</span>
+                    <p>Суб.-Вос. 10:00-20:00</p>
+                </div>
+                <a href="" class="callBack">Обратный звонок</a>
+            </div>
+            <div class="footInfo">
+                <p>Дизайн сайта: <span>shkuratovdesigner.com</span></p>
+                <p>© Все права защищены 2022</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

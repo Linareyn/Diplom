@@ -1,0 +1,274 @@
+.catalogPrewiew {
+    display: flex;
+    gap: 30px;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 4px;
+
+    & span {
+        font-family: SF Pro Text Medium;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
+
+    & input {
+        display: none;
+
+        &:checked+.custom-checkbox {
+            background-color: #008060;
+            border-color: #008060;
+
+            &::after {
+                opacity: 1;
+                transform: rotate(45deg) scale(1);
+            }
+        }
+
+        &:disabled+.custom-checkbox {
+            background-color: #f5f5f5;
+            border-color: #ddd;
+            cursor: not-allowed;
+
+            &::after {
+                border-color: #999;
+            }
+        }
+    }
+}
+
+.custom-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #8C9196;
+    border-radius: 4px;
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 1px;
+        width: 6px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        opacity: 0;
+        transform: rotate(45deg) scale(0);
+        transition: all 0.2s ease;
+    }
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    & input {
+        display: none;
+
+        &:checked+.custom-radio {
+            border-color: #008060;
+
+            &::after {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+                background: #008060;
+            }
+        }
+    }
+}
+
+
+.custom-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #8C9196;
+    border-radius: 100px;
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 10px;
+        height: 10px;
+        background: #008060;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+}
+
+.typeProduct {
+    width: 270px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 16px 16px 2px 16px;
+
+    & .food {
+        margin-top: 8px;
+
+        li {
+            margin-bottom: 6px;
+            margin-left: 24px;
+        }
+    }
+
+    & li {
+        margin-bottom: 14px;
+    }
+
+    & p {
+        font-family: SF Pro Text;
+        font-weight: 600;
+        font-style: Semibold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        margin-bottom: 16px;
+    }
+
+    & span {
+        font-family: SF Pro Text;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0px;
+        user-select: none;
+
+    }
+
+}
+
+.byBrands {
+    margin-top: 24px;
+    background-color: white;
+    padding: 16px 16px 0px 16px;
+
+    & p {
+        font-family: SF Pro Text;
+        font-weight: 600;
+        font-style: Semibold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        padding-bottom: 16px;
+    }
+
+    & span {
+        font-family: SF Pro Text;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0px;
+
+    }
+
+    & li {
+        margin-bottom: 16px;
+    }
+}
+
+.searchWrapper {
+    position: relative;
+}
+
+.searchBrand {
+
+    padding-bottom: 16px;
+
+    img {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.searchBrandInput {
+    width: 238px;
+    padding: 8px 12px 8px 40px;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    border: 1px solid #A7ACB1;
+    border-radius: 4px;
+}
+
+.promotionOnly {
+    padding: 18px 16px;
+    background-color: white;
+    border-radius: 5px;
+    width: 270px;
+    margin-bottom: 24px;
+}
+
+.catalogList {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 24px;
+    align-content: flex-start;
+}
+
+.scrollCatalog {
+    display: flex;
+    margin-top: 24px;
+    justify-content: space-between;
+    color: #00A0AC;
+    font-family: SF Pro Text Medium;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+
+
+    & ul {
+        display: flex;
+        gap: 32px;
+    }
+
+    .back {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+
+    }
+
+    .next {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+
+    }
+}
+
+.popularCatalog {
+    margin: 56px 0px;
+}
