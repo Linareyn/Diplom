@@ -1,0 +1,41 @@
+.animal a {
+    margin: 0;
+}
+
+.list-article {
+    display: flex;
+    column-gap: 24px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-dog {
+    font-family: SF Pro Display;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 42px;
+    line-height: 44px;
+    letter-spacing: 0px;
+    margin: 40px 0px;
+}
+
+.button_more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 65px;
+
+    & button {
+        padding: 12px 24px;
+        background-color: white;
+        border: 1px solid #00A0AC;
+        border-radius: 4px;
+    }
+}

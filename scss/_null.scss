@@ -122,6 +122,11 @@ h6 {
   src: url('../font/SF\ Pro\ Display/SF-Pro-Display-Semibold.otf');
 }
 
+@font-face {
+  font-family: 'SF-Pro-Display-Regular';
+  src: url(../font/SF\ Pro\ Display/SF-Pro-Display-Regular.otf);
+}
+
 .container {
   max-width: 1200px;
   width: 100%;

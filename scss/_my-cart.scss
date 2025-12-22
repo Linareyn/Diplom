@@ -1,0 +1,216 @@
+.my-cart {
+    font-family: SF-Pro-Display-Semibold;
+    font-weight: 600;
+    font-style: Semibold;
+    font-size: 28px;
+    line-height: 130%;
+    letter-spacing: 0px;
+    margin-bottom: 24px;
+}
+
+.making-purchase {
+    margin-bottom: 64px;
+    display: flex;
+    gap: 30px;
+
+}
+
+.place-order {
+    padding: 16px 24px;
+    background-color: #008060;
+    border-radius: 8px;
+    width: 371px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 210px;
+}
+
+
+.frame-shoping {
+    width: 770px;
+    padding: 24px 16px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.buy-product {
+    display: flex;
+    gap: 16px;
+
+    & .img-product {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+.name-product {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & h3 {
+        font-family: SF Pro Text Semi-bold;
+        font-weight: 600;
+        font-style: Semibold;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: 0px;
+    }
+
+    & button {
+        font-family: SF Pro Text;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding: 2px 8px;
+        background-color: rgba(228, 229, 231, 1);
+    }
+
+    & p {
+        cursor: pointer;
+        font-family: SF Pro Text;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #2C6ECB;
+    }
+}
+
+.quantity {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & p {
+        font-family: SF Pro Text Bold;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: 0px;
+
+    }
+
+}
+
+.amount {
+    display: flex;
+    gap: 6px;
+
+    & .add {
+        font-family: SF Pro Text;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0px;
+        width: 36px;
+        height: 36px;
+        color: #008060;
+        background-color: white;
+        border: 1px solid #BABFC3;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & input {
+        width: 36px;
+        height: 36px;
+        background-color: white;
+        border: 1px solid #BABFC3;
+        border-radius: 4px;
+        font-family: SF Pro Text;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        justify-content: center;
+
+        &::placeholder {
+            color: #202223;
+            text-align: center;
+        }
+    }
+
+    & img {
+        width: 24px;
+        height: 24px;
+        margin-left: 19px;
+    }
+}
+
+.price-quantity {
+    display: flex;
+    justify-content: space-between;
+
+    & h2 {
+        font-family: SF Pro Display;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 0px;
+
+    }
+
+    & p {
+        font-family: SF Pro Text;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0px;
+
+    }
+}
+
+.pickup-location {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.box-location {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    & span {
+        font-family: SF-Pro-Display-Semibold;
+        font-weight: 600;
+        font-style: Semibold;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 0px;
+
+    }
+}
+
+.order {
+    & a {
+        color: #202223;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 102px;
+        background-color: white;
+        border-radius: 4px;
+        font-family: SF Pro Text Medium;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: center;
+        display: inline-block;
+    }
+}
