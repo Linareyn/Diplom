@@ -123,6 +123,7 @@ h6 {
   width: 100%;
   margin: 0 auto;
   padding: 0px 15px;
+  overflow: hidden;
 }
 
 header {
@@ -679,73 +680,97 @@ footer {
   flex-direction: column;
 }
 
-.cardProduct {
+.kg {
   display: flex;
-  flex-direction: column;
-  gap: 31px;
-  width: 270px;
-  padding: 8px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.cardProduct--white {
-  background-color: white;
-}
-.cardProduct img {
-  max-height: 210px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
-.cardProduct h2 {
-  color: rgb(0, 0, 0);
-  font-family: SF Pro Text Bold;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  letter-spacing: 0px;
-  text-align: left;
-  cursor: pointer;
-}
-.cardProduct h2:hover {
-  color: rgb(0, 160, 172);
-}
-.cardProduct .buy1click {
-  padding: 9px 73px;
-  background-color: white;
-  border: 1px solid rgb(0, 160, 172);
-  border-radius: 5px;
-  display: flex;
-  gap: 11px;
-}
-.cardProduct .cart {
-  border: 1px solid;
-  border-radius: 5px;
-  border-color: rgb(186, 191, 195);
-  background-color: white;
-  padding: 5px 5px 5px 12px;
-  cursor: pointer;
-}
-.cardProduct .cart:hover {
-  background-color: white;
-  border-color: rgb(186, 191, 195);
-  color: inherit;
-}
-.cardProduct button {
+
+.btnKg {
   font-family: SF Pro Text;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0px;
-  text-align: left;
-  padding: 2px 8px;
+  text-align: center;
   background-color: rgb(228, 229, 231);
+  border: none;
+  padding: 2px 8px;
+  transition: all 0.3s ease;
 }
-.cardProduct button:hover {
+
+.btnKg:hover {
+  background-color: rgb(68, 157, 167);
+  color: white;
+}
+
+.card {
+  position: relative;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  background-color: white;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 17px;
+}
+
+h3 {
+  font-family: SF Pro Text Semi-bold;
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+h3:hover {
+  color: rgb(0, 160, 172);
+}
+
+.buy {
+  font-family: SF Pro Text Medium;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 160, 172);
+  border-radius: 4px;
+  background-color: white;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.buy:hover {
   background-color: rgb(0, 160, 172);
   color: white;
 }
-.cardProduct span {
-  font-family: SF Pro Text Bold;
+
+.cart {
+  padding: 5px 8px 5px 12px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  background-color: white;
+  border: solid 0.7px;
+  border-color: rgb(186, 191, 195);
+  border-radius: 5px;
+}
+
+.byn {
+  font-family: SF Pro Text;
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
@@ -753,28 +778,44 @@ footer {
   text-align: left;
 }
 
-.priceCart {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.title {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 28px;
 }
 
-.product {
+.active {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.imgCard {
+  width: 254px;
+  height: 210px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.Popular_Product {
   display: flex;
+  justify-content: flex-start;
   gap: 30px;
+  transition: transform 0.5s ease-in-out;
 }
 
-.sale-label {
+.sale {
+  position: absolute;
+  padding: 0px 6px;
   font-family: SF Pro Text;
   font-weight: 400;
   font-style: Regular;
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0px;
-  padding: 0px 6px;
-  background-color: #FD5749;
   color: white;
-  display: flex;
-  position: absolute;
-  border-radius: 2px;
+  background-color: #FD5749;
 }/*# sourceMappingURL=articles.css.map */

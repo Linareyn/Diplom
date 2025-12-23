@@ -1,5 +1,6 @@
 .fonNew {
     background-color: white;
+    overflow: hidden;
 }
 
 .buttonLRnew-button {
@@ -45,4 +46,20 @@
     &--grey{
         background-color: #FAFBFB;
     }
+}
+.New_product{
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+.cardN {
+    position: relative;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: #FAFBFB;
+    gap: 16px;
+    justify-content: space-between;
 }
