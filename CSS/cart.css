@@ -408,6 +408,7 @@ footer {
 
 .article {
   width: 370px;
+  min-height: 346px;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -435,6 +436,7 @@ footer {
   display: flex;
   color: #8C9196;
   justify-content: space-between;
+  margin-top: auto;
 }
 .readTime div {
   display: flex;
@@ -465,16 +467,30 @@ footer {
   border-radius: 4px;
 }
 
-.articleList {
+.article-list {
   display: flex;
   gap: 30px;
   margin-bottom: 24px;
+  transition: transform 0.5s ease;
+  align-items: stretch;
 }
 
 .articalText {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.articles-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.img-article {
+  width: 338px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .popular {
