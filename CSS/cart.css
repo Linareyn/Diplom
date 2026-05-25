@@ -414,6 +414,8 @@ footer {
   background-color: white;
   padding: 16px;
   gap: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .article h3 {
   font-family: SF Pro Text;
@@ -430,6 +432,10 @@ footer {
   font-size: 14px;
   line-height: 125%;
   letter-spacing: 0px;
+}
+
+.article:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .readTime {
@@ -699,6 +705,13 @@ h3:hover {
   letter-spacing: 0px;
   color: white;
   background-color: #FD5749;
+}
+
+.catalogList {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .navigationHead {

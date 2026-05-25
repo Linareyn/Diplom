@@ -309,41 +309,6 @@ header {
   color: white;
 }
 
-.animal {
-  display: flex;
-  gap: 24px;
-  width: 100%;
-  justify-content: space-between;
-}
-.animal a {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-family: SF Pro Text;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0px;
-  color: rgb(32, 34, 35);
-  width: 214px;
-  height: 84px;
-  background-color: white;
-  margin: 24px 0px;
-  border-radius: 5px;
-}
-
-.fonAnimal {
-  background-color: rgb(246, 246, 247);
-}
-
-.animalList {
-  display: flex;
-  gap: 24px;
-}
-.animalList li {
-  opacity: 1;
-}
-
 .navigationHead {
   margin-top: 16px;
   display: flex;
@@ -848,4 +813,73 @@ h3:hover {
   justify-content: flex-start;
   gap: 30px;
   transition: transform 0.5s ease-in-out;
-}/*# sourceMappingURL=articles.css.map */
+}
+
+.article-detail {
+  display: flex;
+  flex-direction: column;
+}
+.article-detail h1 {
+  font-family: SF Pro Display;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 42px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+.article-detail .detail-img {
+  height: 306px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 32px 0px;
+}
+.article-detail p {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 145%;
+  letter-spacing: 0px;
+}
+.article-detail a {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #00A0AC;
+  padding: 31px 0px;
+}
+
+.meta {
+  display: flex;
+  color: #8C9196;
+  margin-top: auto;
+  margin-bottom: 32px;
+}
+.meta img {
+  width: 16px;
+  height: 16px;
+}
+.meta span {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  display: flex;
+  gap: 6px;
+}
+
+.time {
+  display: flex;
+  gap: 6px;
+  padding-right: 16px;
+}
+
+.date {
+  display: flex;
+  gap: 6px;
+}/*# sourceMappingURL=article_details.css.map */

@@ -1,0 +1,76 @@
+.article-detail {
+    display: flex;
+    flex-direction: column;
+
+    & h1 {
+        font-family: SF Pro Display;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 42px;
+        line-height: 120%;
+        letter-spacing: 0px;
+
+    }
+
+    .detail-img {
+        height: 306px;
+        object-fit: cover;
+        padding: 32px 0px;
+    }
+
+    & p {
+        font-family: SF Pro Text;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 145%;
+        letter-spacing: 0px;
+
+    }
+
+    & a {
+        font-family: SF Pro Text;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: #00A0AC;
+        padding: 31px 0px;
+    }
+}
+
+.meta {
+    display: flex;
+    color: #8C9196;
+    margin-top: auto;
+    margin-bottom: 32px;
+
+    & img {
+        width: 16px;
+        height: 16px;
+    }
+
+    & span {
+        font-family: SF Pro Text;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        display: flex;
+        gap: 6px;
+
+    }
+}
+
+.time {
+    display: flex;
+    gap: 6px;
+    padding-right: 16px;
+}
+
+.date {
+    display: flex;
+    gap: 6px;
+}

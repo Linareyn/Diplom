@@ -423,6 +423,18 @@ header {
   transform: rotate(180deg);
 }
 
+.custom-select .select-options {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 100;
+}
+
+.custom-select .select-options.show {
+  display: block;
+}
+
 .select-header {
   border: 1px solid #BABFC3;
   border-radius: 4px;
@@ -954,6 +966,13 @@ h3:hover {
   background-color: #FD5749;
 }
 
+.catalogList {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
 .usefulArticle {
   display: flex;
   justify-content: space-between;
@@ -982,6 +1001,8 @@ h3:hover {
   background-color: white;
   padding: 16px;
   gap: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .article h3 {
   font-family: SF Pro Text;
@@ -998,6 +1019,10 @@ h3:hover {
   font-size: 14px;
   line-height: 125%;
   letter-spacing: 0px;
+}
+
+.article:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .readTime {

@@ -216,3 +216,10 @@ h3:hover {
     background-color: #FD5749;
 
 }
+
+.catalogList {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+}

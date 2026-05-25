@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/stock.css">
-    <title>Акции</title>
+    <link rel="stylesheet" href="./CSS/article_details.css">
+    <title>Статьи</title>
 </head>
 
 <body>
@@ -66,28 +66,11 @@
     <div class="container">
         <div class="navigationHead">
             <a href="./index.html" class="navMain">Главная</a><img src="./image/chevron-right_minor.png" alt=""><a
-                href="./stock.html" class="navCatalog">Акции</a>
+                href="./catalog.html" class="navCatalog">Статья</a>
         </div>
     </div>
-    <div class="container">
-        <h2 class="stock-title">Акции</h2>
-        <div class="stock-list" id="stockList">
-            <div class="stock">
-                <h3>Чёрная пятница</h3>
-                <h4>Скидка 30%</h4>
-                <img src="./image/blackfriday.jpg" alt="">
-                <p>Начало акции: 19 Февраль 2024 15:03</p>
-                <p>Конец акции: 01 Июнь 2024 06:06</p>
-            </div>
-            <div class="stock">
-                <h3>Чёрная пятница</h3>
-                <h4>Скидка 30%</h4>
-                <img src="./image/blackfriday.jpg" alt="">
-                <p>Начало акции: 19 Февраль 2024 15:03</p>
-                <p>Конец акции: 01 Июнь 2024 06:06</p>
-            </div>
-        </div>
-    </div>
+
+    <div class="container" id="articleDetail"></div>
 
     <div class="popularFon">
         <div class="container">
@@ -203,10 +186,11 @@
             </div>
         </div>
     </footer>
-
+    <script src="./js/article_details.js"></script>
     <script src="./js/popular-product.js"></script>
     <script src="./js/sliderPopular.js"></script>
-    <script src="./js/stocks.js"></script>
+
+
 </body>
 
 </html>

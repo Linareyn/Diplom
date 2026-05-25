@@ -28,6 +28,8 @@
     background-color: white;
     padding: 16px;
     gap: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 
     & h3 {
         font-family: SF Pro Text;
@@ -46,15 +48,19 @@
         font-size: 14px;
         line-height: 125%;
         letter-spacing: 0px;
-      
+
     }
+}
+
+.article:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .readTime {
     display: flex;
     color: #8C9196;
     justify-content: space-between;
-     margin-top: auto;
+    margin-top: auto;
 
     & div {
         display: flex;
@@ -92,7 +98,7 @@
     gap: 30px;
     margin-bottom: 24px;
     transition: transform 0.5s ease;
-     align-items: stretch;
+    align-items: stretch;
 }
 
 .articalText {
@@ -108,7 +114,6 @@
 
 .img-article {
     width: 338px;
-    height: 160px; 
-    object-fit: cover; 
+    height: 160px;
+    object-fit: cover;
 }
-

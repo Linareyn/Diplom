@@ -65,6 +65,17 @@
     }
 }
 
+.custom-select .select-options {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 100;
+}
+.custom-select .select-options.show {
+    display: block;
+}
+
 .select-header {
     border: 1px solid #BABFC3;
     border-radius: 4px;
