@@ -185,9 +185,9 @@ h3:hover {
 
 .active {
     max-width: 1200px;
-    margin: 0 auto;
     overflow: hidden;
-
+    background-color: rgba(0, 160, 172, 1);
+    color: white;
 }
 
 .imgCard {

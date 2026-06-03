@@ -676,8 +676,9 @@ h3:hover {
 
 .active {
   max-width: 1200px;
-  margin: 0 auto;
   overflow: hidden;
+  background-color: rgb(0, 160, 172);
+  color: white;
 }
 
 .imgCard {
@@ -839,7 +840,7 @@ h3:hover {
   display: flex;
   gap: 6px;
 }
-.amount .add {
+.amount .decrease-qty, .amount .increase-qty {
   font-family: SF Pro Text;
   font-weight: 400;
   font-style: Regular;
@@ -855,7 +856,7 @@ h3:hover {
   align-items: center;
   justify-content: center;
 }
-.amount input {
+.amount .qty-input {
   width: 36px;
   height: 36px;
   background-color: white;
@@ -869,11 +870,11 @@ h3:hover {
   vertical-align: middle;
   justify-content: center;
 }
-.amount input::-moz-placeholder {
+.amount .qty-input::-moz-placeholder {
   color: #202223;
   text-align: center;
 }
-.amount input::placeholder {
+.amount .qty-input::placeholder {
   color: #202223;
   text-align: center;
 }
@@ -939,6 +940,18 @@ h3:hover {
   letter-spacing: 0px;
   text-align: center;
   display: inline-block;
+}
+
+.empty-cart {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0px;
+}
+.empty-cart a {
+  color: #00A0AC;
 }
 
 .fonNew {
