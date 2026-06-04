@@ -366,16 +366,39 @@ header {
 
 .gallery {
   display: flex;
+  gap: 16px;
 }
 
 .frame {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  gap: 10px;
+}
+
+.frame img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .mainImg {
-  padding-right: 16px;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mainImg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .productInfo {
@@ -680,7 +703,8 @@ header {
   gap: 24px;
 }
 
-.peculiarities ul, .analysis ul {
+.peculiarities ul,
+.analysis ul {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1097,4 +1121,194 @@ footer {
 }
 .footInfo span {
   color: #2C6ECB;
+}
+
+.callBack-form {
+  position: relative;
+  padding: 24px 56px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 461px;
+  border-radius: 8px;
+}
+.callBack-form h2 {
+  font-family: SF Pro Display;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.callBack-form h5 {
+  font-family: SF Pro Text Semi-bold;
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0px;
+}
+.callBack-form input {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  border: 1px solid #BABFC3;
+  width: 347px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.callBack-form button {
+  font-family: SF Pro Text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  background-color: #00A0AC;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.callBack-form p {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding-bottom: 4px;
+}
+.callBack-form .personal-data {
+  color: #2C6ECB;
+  cursor: pointer;
+}
+.callBack-form .send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.callBack-form .close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.callBack-hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.callBack-active {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  visibility: visible;
+  opacity: 1;
+}
+
+.success-form, .wrong-form {
+  position: relative;
+  padding: 24px 56px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 461px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.success-form img, .wrong-form img {
+  width: 40px;
+  height: 40px;
+}
+.success-form .close, .wrong-form .close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  right: 4px;
+  cursor: pointer;
+}
+.success-form h2, .wrong-form h2 {
+  font-family: SF Pro Display;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.success-form p, .wrong-form p {
+  font-family: SF Pro Text;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.success-form button, .wrong-form button {
+  color: white;
+  background-color: #00A0AC;
+  border-radius: 4px;
+  font-family: SF Pro Text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success, .wrong {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.success.show, .wrong.show {
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=product.css.map */

@@ -202,11 +202,57 @@
                 <p>© Все права защищены 2022</p>
             </div>
         </div>
-    </footer>
+        </footer>
+        <div class="callBack-hidden" id="callback-modal">
+        <div class="callBack-form">
+            <img src="./image/Dismiss.png" alt="Закрыть" class="close">
+            <div>
+                <h2>Перезвоним вам в течение 15 минут</h2>
+            </div>
+            <div class="form">
+                <div>
+                    <h5>Имя</h5>
+                    <input type="text" placeholder="Иванов Иван Иванович" id="callbackName">
+                </div>
+                <div>
+                    <h5>Номер телефона</h5>
+                    <input type="tel" placeholder="+375 ___-__-__" id="callbackPhone">
+                </div>
+            </div>
+            <div class="send">
+                <button id="confirm">Отправить</button>
+            </div>
+            <div>
+                <p>Нажимая на кнопку вы даёте согласие на обработку <span class="personal-data">персональных
+                        данных</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="success hidden" id="successModal">
+        <div class="success-form">
+            <img src="./image/Dismiss.png" alt="" class="close">
+            <img src="./image/green.png" alt="">
+            <h2>Мы получили вашу заявку</h2>
+            <p>Ожидайте звонка в течение 15 минут</p>
+            <button class="success-btn">Понятно, жду</button>
+        </div>
+    </div>
+    <div class="wrong hidden" id="wrongModal">
+        <div class="wrong-form">
+            <img src="./image/Dismiss.png" alt="" class="close">
+            <img src="./image/red.png" alt="">
+            <h2>Ошибка</h2>
+            <p>Что-то пошло не так</p>
+            <button class="wrong-btn">Понятно</button>
+        </div>
+    </div>
+    
 
+    <script src="./js/cart.js"></script>
     <script src="./js/popular-product.js"></script>
     <script src="./js/sliderPopular.js"></script>
     <script src="./js/stocks.js"></script>
+    <script src="./js/callback.js"></script>
 </body>
 
 </html>

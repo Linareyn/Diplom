@@ -30,17 +30,39 @@
 
 .gallery {
     display: flex;
+    gap: 16px;
 }
 
 .frame {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    
+}
+.frame img {
+    width: 80px;          
+    height: 80px;         
+    object-fit: cover;    
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .mainImg {
-    padding-right: 16px;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
 }
+
+.mainImg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
 
 .productInfo {
     display: flex;
@@ -316,6 +338,7 @@
     display: flex;
     gap: 30px;
     margin: 64px 0px;
+
     & h2 {
         font-family: SF-Pro-Display-Semibold;
         font-weight: 600;
@@ -372,7 +395,8 @@
     gap: 24px;
 }
 
-.peculiarities, .analysis {
+.peculiarities,
+.analysis {
     & ul {
         display: flex;
         flex-direction: column;
@@ -380,7 +404,8 @@
         padding-left: 20px;
     }
 }
-.composition{
+
+.composition {
     display: flex;
     flex-direction: column;
     gap: 8px;

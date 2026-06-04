@@ -8,12 +8,13 @@ fetch("https://oliver1ck.pythonanywhere.com/api/get_articles_slider/")
     data.results.forEach(article => {
       const articleDiv = document.createElement('div');
       articleDiv.classList.add('article');
+      articleDiv.style.cursor = 'pointer';
 
       articleDiv.innerHTML = `
         <img src="${article.image}" class="img-article" alt="${article.title}">
         <div class="articalText">
           <h3>${article.title}</h3>
-          <p>${article.text.substring(0, 150)}...</p> <!-- краткий отрывок -->
+          <p>${article.text.substring(0, 150)}...</p>
         </div>
         <div class="readTime">
           <div>
@@ -27,13 +28,16 @@ fetch("https://oliver1ck.pythonanywhere.com/api/get_articles_slider/")
         </div>
       `;
 
+      articleDiv.addEventListener('click', () => {
+        window.location.href = `./article-details.html?id=${article.id}`;
+      });
+
       articlesContainer.appendChild(articleDiv);
     });
     initArticlesSlider();
-  })
+  });
 
-
-  function initArticlesSlider() {
+function initArticlesSlider() {
   const slider = document.querySelector('.article-list');
   const prevBtn = document.querySelector('.prev-articles');
   const nextBtn = document.querySelector('.next-articles');
@@ -43,7 +47,7 @@ fetch("https://oliver1ck.pythonanywhere.com/api/get_articles_slider/")
   let currentPosition = 0;
   let cardWidth = 0;
   let maxPosition = 0;
-  let gap = 30; 
+  let gap = 30;
 
   function updateSliderParams() {
     const cards = slider.querySelectorAll('.article');
@@ -52,7 +56,7 @@ fetch("https://oliver1ck.pythonanywhere.com/api/get_articles_slider/")
     cardWidth = cards[0].offsetWidth + gap;
 
     const visibleArea = slider.parentElement.offsetWidth;
-    const totalWidth = cards.length * cardWidth - gap; 
+    const totalWidth = cards.length * cardWidth - gap;
     if (totalWidth > visibleArea) {
       maxPosition = -(totalWidth - visibleArea);
     } else {
@@ -72,7 +76,6 @@ fetch("https://oliver1ck.pythonanywhere.com/api/get_articles_slider/")
     slider.style.transform = `translateX(${currentPosition}px)`;
   }
 
-  
   function moveRight() {
     if (currentPosition <= maxPosition) return;
     currentPosition -= cardWidth;
@@ -86,4 +89,3 @@ fetch("https://oliver1ck.pythonanywhere.com/api/get_articles_slider/")
   prevBtn.addEventListener('click', moveLeft);
   nextBtn.addEventListener('click', moveRight);
 }
-

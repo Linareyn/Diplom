@@ -1,34 +1,45 @@
-let leftArrow = document.querySelector(".left-popular");
-let rightArrow = document.querySelector(".right-popular");
-let value = 0;
+const leftArrow = document.querySelector('.left-popular');
+const rightArrow = document.querySelector('.right-popular');
+let popularPosition = 0;
+let popularCardWidth = 0;
+let popularMaxLeft = 0;
+const gap = 30;
 
-let cardWidth = 0;
-let gap = 30;
-let maxLeft = 0;
-
-
-function updateCardData() {
-  card = document.querySelectorAll(".card");
-  if (card.length > 0) {
-    cardWidth = card[0].clientWidth;
-    maxLeft = -((card.length - 4) * (cardWidth + gap));
-  }
+function updatePopularSlider() {
+    const container = window.popularContainer || document.querySelector('.Popular_Product');
+    if (!container) return;
+    const cards = container.querySelectorAll('.card');
+    if (cards.length === 0) return;
+    popularCardWidth = cards[0].offsetWidth;
+    const visibleCount = Math.floor(container.parentElement.offsetWidth / (popularCardWidth + gap));
+    const maxMove = cards.length - visibleCount;
+    popularMaxLeft = -maxMove * (popularCardWidth + gap);
+    if (popularPosition > 0) popularPosition = 0;
+    if (popularPosition < popularMaxLeft) popularPosition = popularMaxLeft;
+    container.style.transform = `translateX(${popularPosition}px)`;
 }
 
-leftArrow.addEventListener('click', moveLeft);
-rightArrow.addEventListener('click', moveRight);
-
-
 function moveLeft() {
-  console.log(value);
-  if (value >= 0) return;
-  value += gap + cardWidth;
-  cards.style.transform = `translateX(${value}px)`;
+    if (popularPosition >= 0) return;
+    popularPosition += popularCardWidth + gap;
+    if (popularPosition > 0) popularPosition = 0;
+    const container = window.popularContainer || document.querySelector('.Popular_Product');
+    if (container) container.style.transform = `translateX(${popularPosition}px)`;
 }
 
 function moveRight() {
-  console.log(value);
-  if (value <= maxLeft) return;
-  value -= gap + cardWidth;
-  cards.style.transform = `translateX(${value}px)`;
+    if (popularPosition <= popularMaxLeft) return;
+    popularPosition -= popularCardWidth + gap;
+    if (popularPosition < popularMaxLeft) popularPosition = popularMaxLeft;
+    const container = window.popularContainer || document.querySelector('.Popular_Product');
+    if (container) container.style.transform = `translateX(${popularPosition}px)`;
 }
+
+if (leftArrow) leftArrow.addEventListener('click', moveLeft);
+if (rightArrow) rightArrow.addEventListener('click', moveRight);
+window.addEventListener('resize', () => updatePopularSlider());
+
+window.initPopularSlider = function() {
+    popularPosition = 0;
+    updatePopularSlider();
+};

@@ -1,35 +1,45 @@
-let leftArrowN = document.querySelector(".left-new");
-let rightArrowN = document.querySelector(".right-new");
-let valueN = 0;
+const leftArrowNew = document.querySelector('.left-new');
+const rightArrowNew = document.querySelector('.right-new');
+let newPosition = 0;
+let newCardWidth = 0;
+let newMaxLeft = 0;
+const gapNew = 30;
 
-let cardWidths = 0;
-let gapN = 30;
-let maxLefts = 0;
-
-
-function updateCardDataN() {
-  cardN = document.querySelectorAll(".cardN");
-  if (cardN.length > 0) {
-    cardWidths = cardN[0].clientWidth;
-    maxLefts = -((cardN.length - 4) * (cardWidths + gapN));
-  }
+function updateNewSlider() {
+    const container = window.newContainer || document.querySelector('.New_product');
+    if (!container) return;
+    const cards = container.querySelectorAll('.cardN');
+    if (cards.length === 0) return;
+    newCardWidth = cards[0].offsetWidth;
+    const visibleCount = Math.floor(container.parentElement.offsetWidth / (newCardWidth + gapNew));
+    const maxMove = cards.length - visibleCount;
+    newMaxLeft = -maxMove * (newCardWidth + gapNew);
+    if (newPosition > 0) newPosition = 0;
+    if (newPosition < newMaxLeft) newPosition = newMaxLeft;
+    container.style.transform = `translateX(${newPosition}px)`;
 }
 
-
-leftArrowN.addEventListener('click', moveLeft);
-rightArrowN.addEventListener('click', moveRight);
-
-
-function moveLeft() {
-  console.log(valueN);
-  if (valueN >= 0) return;
-  valueN += gapN + cardWidths;
-  cardsN.style.transform = `translateX(${valueN}px)`;
+function moveNewLeft() {
+    if (newPosition >= 0) return;
+    newPosition += newCardWidth + gapNew;
+    if (newPosition > 0) newPosition = 0;
+    const container = window.newContainer || document.querySelector('.New_product');
+    if (container) container.style.transform = `translateX(${newPosition}px)`;
 }
 
-function moveRight() {
-  console.log(valueN);
-  if (valueN <= maxLefts) return;
-  valueN -= gapN + cardWidths;
-  cardsN.style.transform = `translateX(${valueN}px)`;
+function moveNewRight() {
+    if (newPosition <= newMaxLeft) return;
+    newPosition -= newCardWidth + gapNew;
+    if (newPosition < newMaxLeft) newPosition = newMaxLeft;
+    const container = window.newContainer || document.querySelector('.New_product');
+    if (container) container.style.transform = `translateX(${newPosition}px)`;
 }
+
+if (leftArrowNew) leftArrowNew.addEventListener('click', moveNewLeft);
+if (rightArrowNew) rightArrowNew.addEventListener('click', moveNewRight);
+window.addEventListener('resize', () => updateNewSlider());
+
+window.initNewSlider = function() {
+    newPosition = 0;
+    updateNewSlider();
+};

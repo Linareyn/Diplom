@@ -22,12 +22,9 @@ function createProductCard(product) {
 
     const hasSale = product.sale && product.sale.title !== "Нет акции";
 
-    // Формируем кнопки веса с data-атрибутами
     let variantsHtml = '';
     if (product.countitemproduct_set && product.countitemproduct_set.length) {
         variantsHtml = product.countitemproduct_set.map(item => {
-            // ВАЖНО: Здесь product.price — это базовая цена.
-            // item.percent — это значение из API (1100, 570 и т.д.)
             const basePrice = parseFloat(product.price);
             const priceForWeight = (basePrice * (item.percent / 100)).toFixed(2);
             return `<button class="btnKg" data-weight="${item.value}" data-price="${priceForWeight}" data-unit="${item.unit}">${item.value} ${item.unit}</button>`;
@@ -51,21 +48,18 @@ function createProductCard(product) {
         <button class="buy one-click-buy" data-id="${product.id}">Купить в 1 клик</button>
     `;
 
-    // --- Логика выбора веса и обновления цены (только один раз!) ---
     const weightBtns = card.querySelectorAll('.btnKg');
     const weightOptions = Array.from(weightBtns).map(btn => ({
         weight: btn.innerText.trim(),
-        price: parseFloat(btn.dataset.price)  // важно: цена должна быть числом
+        price: parseFloat(btn.dataset.price) 
     }));
     const priceElement = card.querySelector('.price .byn');
 
     weightBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            // Снимаем активный класс со всех кнопок веса в этой карточке
             weightBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            // Меняем цену на ту, что в data-price
             const newPrice = btn.dataset.price;
             if (priceElement && newPrice) {
                 priceElement.textContent = parseFloat(newPrice).toFixed(2) + ' BYN';
@@ -73,18 +67,20 @@ function createProductCard(product) {
         });
     });
 
-    // Если ни одна кнопка веса ещё не активна, активируем первую
     if (!card.querySelector('.btnKg.active')) {
         const firstBtn = card.querySelector('.btnKg');
         if (firstBtn) {
             firstBtn.classList.add('active');
-            // И сразу выставляем цену по первому весу (на случай, если defaultPrice не совпадает)
             const firstPrice = firstBtn.dataset.price;
             if (priceElement && firstPrice) {
                 priceElement.textContent = parseFloat(firstPrice).toFixed(2) + ' BYN';
             }
         }
     }
+    card.addEventListener('click', (e) => {
+        if (e.target.closest('.add-to-cart') || e.target.closest('.one-click-buy')) return;
+        window.location.href = `./pageProduct.html?id=${product.id}`;
+    });
 
     return card;
 }
@@ -265,7 +261,6 @@ function handleAddToCart(e) {
         if (firstWeight) selectedWeight = firstWeight.innerText.trim();
     }
 
-    // Собираем все варианты веса из кнопок (data-атрибуты)
     const weightBtns = card.querySelectorAll('.btnKg');
     const weightOptions = Array.from(weightBtns).map(btn => ({
         weight: btn.innerText.trim(),
@@ -281,7 +276,7 @@ function handleAddToCart(e) {
             name: title,
             price: price,
             weight: selectedWeight,
-            weightOptions: weightOptions, // добавляем полный список
+            weightOptions: weightOptions,
             image: image,
             quantity: quantity
         });
@@ -289,7 +284,7 @@ function handleAddToCart(e) {
     }
 }
 
-// Вспомогательная функция уведомления
+
 function showNotification(message) {
     const notif = document.createElement('div');
     notif.textContent = message;

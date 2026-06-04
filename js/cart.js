@@ -88,7 +88,7 @@ function handleWeightChange(e) {
         cart[index].weight = newWeight;
         cart[index].price = newPrice;
         saveCart(cart);
-        renderCart(); // перерисовываем
+        renderCart();
     }
 }
 
@@ -147,7 +147,6 @@ function renderCart() {
     if (priceBlock) priceBlock.textContent = `${totalPrice.toFixed(2)} BYN`;
     if (itemsBlock) itemsBlock.textContent = `${totalItems} ${declOfNum(totalItems, ['товар', 'товара', 'товаров'])}`;
 
-    // Обработчики
     document.querySelectorAll('.weight-option').forEach(btn => {
         btn.removeEventListener('click', handleWeightChange);
         btn.addEventListener('click', handleWeightChange);
